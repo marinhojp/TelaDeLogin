@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.container{
+    background-color: white;
+    max-width: 400px;
+    min-height: 50vh;
+    padding: 4rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+main h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputField{
+    position: relative;
+}
+
+form .inputField:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.inputField .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.inputField .underline::after{
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: dodgerblue; 
+    transform: scaleX(0);   
+}
+
+.inputField input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.inputField input{
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.inputField input ::placeholder{
+    color:rgba(0, 0, 0, 0.5) ;
+}
+
+form input[type ="submit"]{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+}
+
+form input[type ="submit"]:hover{
+    letter-spacing: 0.5px;
+    background: linear-gradient(to left, rgb(20, 147, 220), rgb(17, 54, 71));
+}
